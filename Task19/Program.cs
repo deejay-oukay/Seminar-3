@@ -12,9 +12,9 @@ while (
 
 string numberString = Convert.ToString(number);
 int minus = 0;
-if (number < 0)
-    minus = 1;
+if (number < 0) //если число с минусом не может быть палиндромом (не в курсе),
+    minus = 1;  //то просто закомментируем эти две строки :-)
 if ((numberString[0+minus] == numberString[4+minus]) && (numberString[1+minus] == numberString[3+minus]))
-    Console.WriteLine("Это полиндром");
+    Console.WriteLine("Это палиндром");
 else
-    Console.WriteLine("Это НЕ полиндром");
+    Console.WriteLine("Это НЕ палиндром");
