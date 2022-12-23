@@ -23,12 +23,14 @@ void PrintArrayMembers(string option = "all")
     {
         case "even":
             Console.Write("Только чётные числа: ");
-            for (int i = 0; i < numbers.Length; i++)
-                if ((numbers[i] % 2) == 0)
+            foreach (int item in numbers)
+            {
+                if ((item % 2) == 0)
                 {
-                    Console.Write(numbers[i]+" ");
+                    Console.Write(item+" ");
                     evenCount++;
                 }
+            }
             Console.Write("\n");
             break;
         default:
